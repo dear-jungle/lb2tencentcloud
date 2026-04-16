@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB 配置迁移工具 — 阿里云 → 腾讯云</title>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/material-icons.css">
+    <link rel="stylesheet" href="/css/app.css?v=7">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="blue-grey darken-3">
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo">
+                <i class="material-icons left">swap_horiz</i>
+                CLB 迁移工具
+            </a>
+        </div>
+    </nav>
+
+    <!-- 分步向导导航条 -->
+    <div class="container" style="margin-top: 20px;">
+        <div id="step-navigator" class="step-navigator">
+            <div class="step active" data-step="credential">
+                <span class="step-number">1</span>
+                <span class="step-label">凭证配置</span>
+            </div>
+            <div class="step" data-step="select_source">
+                <span class="step-number">2</span>
+                <span class="step-label">实例关联</span>
+            </div>
+            <div class="step" data-step="mapping">
+                <span class="step-number">3</span>
+                <span class="step-label">配置映射与计划</span>
+            </div>
+            <div class="step" data-step="execute">
+                <span class="step-number">4</span>
+                <span class="step-label">执行迁移</span>
+            </div>
+            <div class="step" data-step="report">
+                <span class="step-number">5</span>
+                <span class="step-label">迁移报告</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 步骤内容区域 -->
+    <div class="container" style="margin-top: 30px;">
+        <div id="step-content">
+            <!-- 各步骤内容由 JS 模块动态渲染 -->
+            <div class="center-align" style="padding: 60px 0;">
+                <div class="preloader-wrapper active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left"><div class="circle"></div></div>
+                        <div class="gap-patch"><div class="circle"></div></div>
+                        <div class="circle-clipper right"><div class="circle"></div></div>
+                    </div>
+                </div>
+                <p class="grey-text">加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast 通知区域 -->
+    <div id="toast-container"></div>
+
+    <!-- 模态弹窗容器 -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h5 id="modal-title">操作确认</h5>
+            <div id="modal-body"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="modal-cancel" class="modal-close waves-effect waves-red btn-flat">取消</a>
+            <a href="#!" id="modal-confirm" class="waves-effect waves-green btn blue">确认</a>
+        </div>
+    </div>
+
+    <!-- JS 模块 -->
+    <script src="/js/materialize.min.js?v=1"></script>
+    <script type="module" src="/js/app.js?v=7"></script>
+</body>
+</html>

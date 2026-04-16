@@ -1,0 +1,31 @@
+# Flask 核心
+Flask>=3.0.0
+Flask-CORS>=4.0.0
+flask-sock>=0.7.0
+python-dotenv>=1.0.0
+
+# 数据库
+SQLAlchemy>=2.0.0
+Flask-Migrate>=4.0.0
+PyMySQL>=1.1.0
+cryptography>=41.0.0
+
+# WSGI/ASGI 服务器
+gunicorn>=21.0.0
+
+# 阿里云 SDK
+aliyun-python-sdk-core>=2.13.36
+aliyun-python-sdk-slb>=3.3.20
+
+# 腾讯云 SDK
+tencentcloud-sdk-python>=3.0.1000
+
+# 工具
+gevent>=23.0.0
+
+# 测试
+pytest>=7.4.0
+pytest-flask>=1.2.0
+pytest-mock>=3.11.0
+pytest-cov>=4.1.0
+responses>=0.23.0

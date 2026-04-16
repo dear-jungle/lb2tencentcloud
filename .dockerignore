@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+venv
+.venv
+.git
+.gitignore
+openspec
+docs
+tests
+*.md
+.env
+.claude
+.codebuddy
+node_modules
+logs
+certs
